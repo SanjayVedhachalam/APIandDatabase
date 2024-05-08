@@ -1,0 +1,56 @@
+#Main{
+    border: solid 0.1rem black;
+    width: fit-content;
+    padding: 2% 5% 2% 4.5%;
+}
+#Welcome{
+    text-align: center;
+}
+.SignInAndUpButtons{
+    padding: 0.5rem;
+    margin-left: 1rem;
+    margin-bottom: 0.2rem;
+}
+#SignIn{
+    display: none;
+    margin-top: 0.5rem;
+}
+#SignUp{
+    display: none;
+    margin-top: 0.5rem;
+}
+.NavigationButtons{
+    padding: 1%;
+    width: 16%;
+    text-align: center;
+}
+#BodyPage{
+    display: none;
+}
+.NavigationBar{
+    margin: 0.1rem;
+    display: flex;
+    margin-bottom: 2rem;
+}
+.HomeTab{
+    display: none;
+}
+.NewBookDetailsTab{
+    display: none;
+    margin-top: 1rem;
+}
+.BorrowBookTab{
+    display: none;
+}
+.BorrowBookHistoryTab{
+    display: none;
+}
+.ReturnBooksTab{
+    display: none;
+}
+.WalletRechargeTab{
+    display: none;
+}
+.WalletBalanceTab{
+    display: none;
+}

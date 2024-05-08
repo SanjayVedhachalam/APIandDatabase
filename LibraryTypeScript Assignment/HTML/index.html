@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Libraray Store</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+</head>
+<body>
+    <script src="../JavaScript/index.js"></script>
+    <div id="Main" class="main">
+        <h3 id="Welcome">Welcome</h3>
+        <button onclick="SignIn()" class="SignInAndUpButtons">SignIn</button><button onclick="SignUp()"
+            class="SignInAndUpButtons">SignUp</button>
+        <div id="SignIn" class="SignIn">
+            <label for="SignInEmailID">Email ID: </label><br><input type="email" id="SignInEmailID" name="SignInEmailID"><br><br>
+            <label for="SignInPassword">Password: </label><br><input type="password" id="SignInPassword" name="SignInPassword"><br><br>
+            <button class="SignInAndUpButtons" onclick="Enter()">Enter</button>
+            <button class="SignInAndUpButtons" onclick="SignInCancel()">Cancel</button>
+        </div>
+        <div id="SignUp" class="SignUp">
+            <label for="SignUpName">Name: </label><br><input type="email" id="SignUpName" name="SignUpName"><br><br>
+            <label for="SignUpEmailID">Email ID: </label><br><input type="email" id="SignUpEmailID" name="SignUpEmailID"><br><br>
+            <label for="SignUpPassword">Password: </label><br><input type="password" id="SignUpPassword" name="SignUpPassword"><br><br>
+            <label for="SignUpConfirmPassword">Confirm Password: </label><br><input type="password" id="SignUpConfirmPassword" name="SignUpConfirmPassword"><br><br>
+            <label for="SignUpGender">Gender: </label><br><select name="Gender" id="Gender">
+                <option value="Select" id="Select">Select</option>
+                <option value="Male" id="GenderMale">Male</option>
+                <option value="Female" id="GenderFemale">Female</option>
+                <option value="Others" id="GenderOthers">Others</option></select><br><br>
+            <label for="SignUpDepartment">Department: <br></label><input type="text" name="SignUpDepartment" id="SignUpDepartment"><br><br>
+            <label for="SignUpPhone">Phone: </label><br><input type="number" id="SignUpPhone" name="SignUpPhone"><br><br>
+            <label for="SignUpWalletBalance">Wallet Balance: </label><br><input type="number" name="SignUpWalletBalance" id="SignUpWalletBalance"><br><br>
+            <button class="SignInAndUpButtons" onclick="Confirm()">Confirm</button>
+            <button class="SignInAndUpButtons" onclick="SignUpCancel()">Cancel</button>
+        </div>
+    </div>
+    <div class="bodyPage" id="BodyPage">
+        <div class="NavigationBar" id="NavigationBar">
+            <button class="NavigationButtons" onclick="HomeTab()">Home</button>
+            <button class="NavigationButtons" onclick="BookDetailsTab()">Book Details</button>
+            <button class="NavigationButtons" onclick="BorrowBookTab()">Borrow Book</button>
+            <button class="NavigationButtons" onclick="BorrowedBookHistoryTab()">Borrowed Book History</button>
+            <button class="NavigationButtons" onclick="ReturnBooksTab()">Return Books</button>
+            <button class="NavigationButtons" onclick="WalletRechargeTab()">Wallet Recharge</button>
+            <button class="NavigationButtons" onclick="WalletBalanceTab()">Wallet Balance</button>
+            <button class="NavigationButtons" onclick="SignoutTab()">Sign Out</button>
+        </div>
+        <div class="HomeTab" id="HomeTab">
+            <h3>Welcome, <span id="WelcomeName"></span></h3>
+        </div>
+
+        <div class="BookDetailsTab" id="BookDetailsTab">
+            <button onclick="AddNewBook()">Add</button>
+            <table id="BookTable" border = 1px>
+
+            </table>
+            <div class="NewBookDetailsTab" id="NewBookDetailsTab">
+                <label for="NewBookName">Book Name: </label><input type="text" name="NewBookName" id="NewBookName" placeholder="Enter book name"><br><br>
+                <label for="NewAuthorName">Author Name: </label><input type="text" name="NewAuthorName" id="NewAuthorName" placeholder="Enter author name"><br><br>
+                <label for="NewBookCount">Book Count: </label><input type="number" name="NewBookCount" id="NewBookCount" placeholder="Enter book count"><br><br>
+                <button class="SignInAndUpButtons" onclick="AddNewBookToList()">Add</button>
+                <button class="SignInAndUpButtons" onclick="CancelNewBook()">Cancel</button>
+            </div>
+        </div>
+
+        <div class="BorrowBookTab" id="BorrowBookTab">
+            <table id="BorrowTable" border="1px">
+
+            </table>
+            <br><br>
+            <label for="BookQuantity">Enter Book Quantity: <input type="number" name="BookQuantity" id="BookQuantity" placeholder="Enter number of books to Borrow"></label>
+        </div>
+
+        <div class="BorrowBookHistoryTab" id="BorrowBookHistoryTab">
+            <table id="BorrowHistoryTable" border="1px">
+
+            </table>
+        </div>
+
+        <div class="ReturnBooksTab" id="ReturnBooksTab">
+            <table id="ReturnBooksTable" border="1px">
+
+            </table>
+        </div>
+
+        <div class="WalletRechargeTab" id="WalletRechargeTab">
+            <label for="RechargeAmount">Recharge Amount: </label><input type="number" name="RechargeAmount" id="RechargeAmount"><br><br>
+            <button class="SignInAndUpButtons" onclick="RechargeWallet()">Recharge</button><button class="SignInAndUpButtons" onclick="CancellingRecharge()">Cancel</button>
+
+        </div>
+
+        <div class="WalletBalanceTab" id="WalletBalanceTab">
+            <h3>Wallet Balance: <span id="WalletBalanceArea"></span></h3>
+        </div>
+    </div>
+</body>
+</html>
